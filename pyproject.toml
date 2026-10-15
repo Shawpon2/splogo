@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "splogo"
+version = "1.0.0"
+description = "A professional, ultra-reliable terminal banner and shell customizer."
+readme = "README.md"
+authors = [{ name = "Shawpon Sp", email = "githubshawpon@gmail.com" }]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: Console",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "rich>=13.0.0",
+    "click>=8.0.0"
+]
+
+[project.scripts]
+splogo = "splogo.cli:main"
+set = "splogo.cli:handle_set_alias"
+out = "splogo.cli:handle_out_alias"
